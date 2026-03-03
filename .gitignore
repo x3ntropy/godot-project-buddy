@@ -1,0 +1,39 @@
+# Godot-specific
+.import/
+.export/
+.export_presets.cfg
+
+# Mono / C#
+.mono/
+data_*/
+
+# Build files
+bin/
+obj/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE
+.vscode/
+.idea/
+
+# Executables
+*.exe
+*.app
+*.apk
+*.ipa
+
+# Common ignores
+node_modules/
+.next/
+.env*.local
+.DS_Store
