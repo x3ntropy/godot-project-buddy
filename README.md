@@ -1,9 +1,9 @@
-# Godot Project Cleaner
+# Godot Project Buddy
 Dead Code & Orphan Asset Scanner for Godot Projects
 
 ## Overview
 
-Godot Project Cleaner is a standalone tool that scans your Godot project directory and detects:
+Godot Project Buddy is a standalone tool that scans your Godot project directory and detects:
 
 - Unused assets (png, wav, ogg, glb, etc.)
 - Orphaned scenes
@@ -17,7 +17,7 @@ This helps reduce project size, clutter, and build time while improving workflow
 
 ## Getting Started
 
-These instructions will help you run Godot Project Cleaner locally.
+These instructions will help you run Godot Project Buddy locally.
 
 ### 1. Download the Project
 - **Option A:** Download the latest release ZIP from GitHub and extract it.
@@ -92,6 +92,7 @@ To contribute:
 This project is licensed under the MIT License.
 
 <img width="1871" height="992" alt="image" src="https://github.com/user-attachments/assets/54b69abd-02d2-4f39-8d53-b8684f5f8298" /><img width="932" height="491" alt="{D0125EB4-4AE5-4C85-9A3F-AD2BD05832D7}" src="https://github.com/user-attachments/assets/4baa83ad-3bb3-46bd-899e-75e560a7ed00" /><img width="938" height="474" alt="{9669475D-88B5-40E5-9BD6-107B1ADD0242}" src="https://github.com/user-attachments/assets/e5b28a82-43cb-4bfd-9507-6bed7d44699a" /><img width="931" height="455" alt="{79883EA5-44A2-4E16-961B-0B50B319DAA2}" src="https://github.com/user-attachments/assets/a5e0bc79-2dff-4556-9dee-ed6b5e5a4eaa" /><img width="942" height="495" alt="{27E6CA7D-7768-4886-84CC-6EA151050D0F}" src="https://github.com/user-attachments/assets/060d6eef-af5d-4cb6-b5f0-1462b10c95f6" /><img width="946" height="450" alt="{B12EDD6E-42A0-4F23-9295-08032E9C356D}" src="https://github.com/user-attachments/assets/83d7bf83-a1bd-4534-8e5e-0ffa0131e21e" />
+
 
 
 
