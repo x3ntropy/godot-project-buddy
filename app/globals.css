@@ -1,0 +1,281 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Dark-first developer theme - deep obsidian with teal accent */
+  --background: oklch(0.09 0.007 260);
+  --foreground: oklch(0.93 0.01 260);
+  --card: oklch(0.12 0.008 260);
+  --card-foreground: oklch(0.93 0.01 260);
+  --popover: oklch(0.12 0.008 260);
+  --popover-foreground: oklch(0.93 0.01 260);
+  --primary: oklch(0.72 0.14 180);
+  --primary-foreground: oklch(0.13 0.01 260);
+  --secondary: oklch(0.18 0.01 260);
+  --secondary-foreground: oklch(0.88 0.01 260);
+  --muted: oklch(0.17 0.009 260);
+  --muted-foreground: oklch(0.58 0.01 260);
+  --accent: oklch(0.19 0.015 260);
+  --accent-foreground: oklch(0.93 0.01 260);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(0.21 0.009 260);
+  --input: oklch(0.21 0.009 260);
+  --ring: oklch(0.72 0.14 180);
+  --chart-1: oklch(0.72 0.14 180);
+  --chart-2: oklch(0.70 0.17 145);
+  --chart-3: oklch(0.65 0.12 220);
+  --chart-4: oklch(0.78 0.15 85);
+  --chart-5: oklch(0.55 0.22 25);
+  --radius: 0.5rem;
+  --sidebar: oklch(0.09 0.007 260);
+  --sidebar-foreground: oklch(0.93 0.01 260);
+  --sidebar-primary: oklch(0.72 0.14 180);
+  --sidebar-primary-foreground: oklch(0.13 0.01 260);
+  --sidebar-accent: oklch(0.17 0.009 260);
+  --sidebar-accent-foreground: oklch(0.93 0.01 260);
+  --sidebar-border: oklch(0.21 0.009 260);
+  --sidebar-ring: oklch(0.72 0.14 180);
+
+  /* Status colors */
+  --status-used: oklch(0.70 0.17 145);
+  --status-unused: oklch(0.55 0.22 25);
+  --status-warning: oklch(0.78 0.15 85);
+  --status-entry: oklch(0.72 0.14 180);
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-status-used: var(--status-used);
+  --color-status-unused: var(--status-unused);
+  --color-status-warning: var(--status-warning);
+  --color-status-entry: var(--status-entry);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Ensure all interactive elements show pointer cursor */
+  button,
+  [role="button"],
+  [type="button"],
+  [type="submit"],
+  [type="reset"],
+  a,
+  label[for],
+  [data-state],
+  .cursor-pointer {
+    cursor: pointer;
+  }
+}
+
+/* ─── Premium animation keyframes ──────────────────────────────────────── */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0   0 oklch(0.72 0.14 180 / 0);    }
+  50%       { box-shadow: 0 0 24px 6px oklch(0.72 0.14 180 / 0.12); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0);   }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Subtle rotating gradient orb for background depth */
+@keyframes orb-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -20px) scale(1.05); }
+  66%  { transform: translate(-20px, 15px) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ─── Animation utility classes ─────────────────────────────────────────── */
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 2.2s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-orb-drift {
+  animation: orb-drift 18s ease-in-out infinite;
+}
+
+/* ─── Staggered delay utilities ─────────────────────────────────────────── */
+.delay-50  { animation-delay: 50ms;  }
+.delay-75  { animation-delay: 75ms;  }
+.delay-100 { animation-delay: 100ms; }
+.delay-150 { animation-delay: 150ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-250 { animation-delay: 250ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* ─── Dynamic gradient background ──────────────────────────────────────── */
+.bg-gradient-deep {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, oklch(0.18 0.025 220 / 0.7) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 80%,  oklch(0.14 0.018 260 / 0.5) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 35% at 10% 60%,  oklch(0.12 0.012 240 / 0.4) 0%, transparent 55%),
+    oklch(0.10 0.008 260);
+}
+
+/* ─── Grid background pattern ───────────────────────────────────────────── */
+.bg-grid {
+  background-image:
+    linear-gradient(oklch(0.24 0.01 260 / 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.24 0.01 260 / 0.35) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Radial fade mask for grid */
+.bg-grid-fade {
+  mask-image: radial-gradient(ellipse 70% 55% at 50% 40%, black 15%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 40%, black 15%, transparent 90%);
+}
+
+/* ─── Glass card surface ────────────────────────────────────────────────── */
+.glass {
+  background: oklch(0.15 0.01 260 / 0.7);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid oklch(0.30 0.01 260 / 0.4);
+}
+
+/* ─── Smooth page transitions ───────────────────────────────────────────── */
+* {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Override for elements that should be instant */
+[data-no-transition] {
+  transition: none !important;
+}
